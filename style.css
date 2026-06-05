@@ -1,0 +1,697 @@
+/* ============================================================
+   MASON RESEARCH LAB — Main Stylesheet
+   
+   TO CHANGE COLORS: Edit the values in the :root section below.
+   TO CHANGE FONTS: Edit the @import line and font-family values.
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Source+Serif+4:ital,wght@0,300;0,400;1,300&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ============================================================
+   COLOR VARIABLES — Edit these to change the site's colors
+   ============================================================ */
+:root {
+  --navy: #1a2e4a;           /* Primary dark color — nav, hero, headings */
+  --navy-light: #243d5f;     /* Slightly lighter navy — card backgrounds */
+  --navy-dark: #111e30;      /* Darkest navy — team section, footer */
+  --brown: #7c5c3e;          /* Accent color — buttons, borders, labels */
+  --brown-light: #9e7a57;    /* Light accent — hover states, eyebrow text */
+  --gray-bg: #f4f2ef;        /* Light gray — section backgrounds */
+  --cream: #faf8f4;          /* Off-white — page background, cards */
+  --gray-mid: #e8e4de;       /* Mid gray — borders, dividers */
+  --gray-text: #6b6560;      /* Muted text color */
+  --text-dark: #2a2420;      /* Main body text color */
+}
+
+/* ============================================================
+   BASE STYLES
+   ============================================================ */
+body {
+  font-family: 'Source Serif 4', Georgia, serif;
+  background: var(--cream);
+  color: var(--text-dark);
+  line-height: 1.7;
+}
+
+a {
+  color: var(--brown);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ============================================================
+   NAVIGATION
+   ============================================================ */
+nav {
+  background: var(--navy);
+  padding: 0 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-brand {
+  font-family: 'Playfair Display', serif;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-links a {
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 0.04em;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #fff;
+}
+
+/* ============================================================
+   HERO SECTION
+   ============================================================ */
+.hero {
+  background: var(--navy);
+  padding: 5rem 3rem 4rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40%;
+  height: 100%;
+  background: var(--navy-light);
+  clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
+  opacity: 0.4;
+}
+
+.hero-content {
+  position: relative;
+  max-width: 680px;
+}
+
+.hero-eyebrow {
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  color: var(--brown-light);
+  text-transform: uppercase;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  font-weight: 500;
+  color: #fff;
+  line-height: 1.15;
+  margin-bottom: 1.5rem;
+}
+
+.hero h1 em {
+  font-style: italic;
+  color: var(--brown-light);
+}
+
+.hero-desc {
+  font-size: 17px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.8;
+  max-width: 520px;
+  margin-bottom: 2rem;
+}
+
+/* ============================================================
+   BUTTONS
+   ============================================================ */
+.btn {
+  display: inline-block;
+  background: var(--brown);
+  color: #fff;
+  text-decoration: none;
+  padding: 0.75rem 1.75rem;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 0.06em;
+  border-radius: 2px;
+  transition: background 0.2s;
+}
+
+.btn:hover {
+  background: var(--brown-light);
+  text-decoration: none;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid var(--brown);
+  color: var(--brown);
+}
+
+.btn-outline:hover {
+  background: var(--brown);
+  color: #fff;
+}
+
+/* ============================================================
+   SECTIONS
+   ============================================================ */
+.section {
+  padding: 4rem 3rem;
+}
+
+.section-alt {
+  background: var(--gray-bg);
+}
+
+.section-dark {
+  background: var(--navy-dark);
+}
+
+.section-label {
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--brown);
+  font-weight: 300;
+  margin-bottom: 0.75rem;
+}
+
+.section-dark .section-label {
+  color: var(--brown-light);
+}
+
+.section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 30px;
+  font-weight: 500;
+  color: var(--navy);
+  margin-bottom: 1.25rem;
+  line-height: 1.3;
+}
+
+.section-dark h2 {
+  color: #fff;
+}
+
+/* ============================================================
+   PAGE HEADER (interior pages)
+   ============================================================ */
+.page-header {
+  background: var(--navy);
+  padding: 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40%;
+  height: 100%;
+  background: var(--navy-light);
+  clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
+  opacity: 0.4;
+}
+
+.page-header-content {
+  position: relative;
+}
+
+.page-header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 0.75rem;
+}
+
+.page-header p {
+  font-size: 16px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 560px;
+  line-height: 1.8;
+}
+
+/* ============================================================
+   ABOUT SECTION (homepage)
+   ============================================================ */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.about-text {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.85;
+  color: var(--text-dark);
+}
+
+.about-text p {
+  margin-bottom: 1rem;
+}
+
+.pillars {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.pillar {
+  background: var(--gray-bg);
+  border-left: 3px solid var(--brown);
+  padding: 1rem 1.25rem;
+  border-radius: 0 4px 4px 0;
+}
+
+.pillar-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--navy);
+  margin-bottom: 0.25rem;
+}
+
+.pillar-desc {
+  font-size: 13px;
+  font-weight: 300;
+  color: var(--gray-text);
+  line-height: 1.6;
+}
+
+/* ============================================================
+   RESEARCH SECTION
+   ============================================================ */
+.research-theme {
+  background: var(--navy);
+  border-radius: 4px;
+  padding: 1.5rem 2rem;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.research-theme-label {
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--brown-light);
+  font-weight: 300;
+  white-space: nowrap;
+  padding-top: 3px;
+}
+
+.research-theme-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 17px;
+  font-weight: 400;
+  color: #fff;
+  line-height: 1.5;
+  font-style: italic;
+}
+
+.research-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.research-card {
+  background: var(--cream);
+  border: 0.5px solid var(--gray-mid);
+  border-radius: 4px;
+  padding: 1.5rem;
+  position: relative;
+}
+
+.research-card.emerging::after {
+  content: 'Emerging';
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: var(--gray-bg);
+  color: var(--brown);
+  padding: 3px 8px;
+  border-radius: 2px;
+  font-weight: 300;
+}
+
+.research-card-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  font-weight: 400;
+  color: var(--gray-mid);
+  line-height: 1;
+  margin-bottom: 0.75rem;
+}
+
+.research-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--navy);
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+.research-card p {
+  font-size: 13px;
+  font-weight: 300;
+  color: var(--gray-text);
+  line-height: 1.7;
+}
+
+/* ============================================================
+   TEAM SECTION
+   ============================================================ */
+.team-top {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.pi-block {
+  background: var(--navy-light);
+  border-radius: 4px;
+  padding: 1.5rem;
+  border: 0.5px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+}
+
+.team-avatar {
+  border-radius: 50%;
+  background: var(--brown);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.pi-block .team-avatar {
+  width: 64px;
+  height: 64px;
+  font-size: 20px;
+}
+
+.team-name {
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+  color: #fff;
+}
+
+.pi-block .team-name {
+  font-size: 17px;
+  margin-bottom: 0.25rem;
+}
+
+.team-role {
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 1.4;
+}
+
+.pi-block .team-role {
+  font-size: 13px;
+}
+
+.pi-bio {
+  font-size: 12px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.45);
+  line-height: 1.6;
+  margin-top: 0.5rem;
+}
+
+.current-block {
+  background: var(--navy-light);
+  border-radius: 4px;
+  padding: 1.5rem;
+  border: 0.5px solid rgba(255, 255, 255, 0.08);
+}
+
+.current-block-label,
+.alumni-block-label {
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--brown-light);
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+.current-members {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.current-member {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.current-member .team-avatar {
+  width: 40px;
+  height: 40px;
+  font-size: 13px;
+}
+
+.current-member .team-name {
+  font-size: 14px;
+  margin-bottom: 0.1rem;
+}
+
+.current-member .team-role {
+  font-size: 12px;
+}
+
+.alumni-block {
+  margin-top: 2rem;
+  background: var(--navy-light);
+  border-radius: 4px;
+  padding: 1.5rem;
+  border: 0.5px solid rgba(255, 255, 255, 0.08);
+}
+
+.alumni-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem 1.5rem;
+}
+
+.alumni-item {
+  font-size: 13px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.7);
+  padding: 0.4rem 0;
+  border-bottom: 0.5px solid rgba(255, 255, 255, 0.06);
+}
+
+.alumni-years {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.35);
+  margin-left: 0.4rem;
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+footer {
+  background: var(--navy-dark);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 2rem 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-brand {
+  font-family: 'Playfair Display', serif;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 14px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.4);
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 300;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* ============================================================
+   CONTENT BLOCKS (interior pages)
+   ============================================================ */
+.content-block {
+  max-width: 720px;
+}
+
+.content-block p {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.85;
+  margin-bottom: 1.25rem;
+  color: var(--text-dark);
+}
+
+.content-block h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--navy);
+  margin: 2rem 0 0.75rem;
+}
+
+/* ============================================================
+   PUBLICATION LIST (research page)
+   ============================================================ */
+.pub-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.pub-item {
+  background: var(--cream);
+  border: 0.5px solid var(--gray-mid);
+  border-radius: 4px;
+  padding: 1.25rem 1.5rem;
+  border-left: 3px solid var(--brown);
+}
+
+.pub-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--navy);
+  margin-bottom: 0.35rem;
+  line-height: 1.4;
+}
+
+.pub-authors {
+  font-size: 13px;
+  font-weight: 300;
+  color: var(--gray-text);
+  margin-bottom: 0.25rem;
+}
+
+.pub-journal {
+  font-size: 13px;
+  font-weight: 300;
+  color: var(--brown);
+  font-style: italic;
+}
+
+/* ============================================================
+   JOIN PAGE
+   ============================================================ */
+.join-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.join-card {
+  background: var(--gray-bg);
+  border-left: 3px solid var(--brown);
+  padding: 1.5rem;
+  border-radius: 0 4px 4px 0;
+}
+
+.join-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--navy);
+  margin-bottom: 0.75rem;
+}
+
+.join-card p {
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--gray-text);
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+/* ============================================================
+   CONTACT PAGE
+   ============================================================ */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.contact-info p {
+  font-size: 15px;
+  font-weight: 300;
+  color: var(--text-dark);
+  line-height: 1.9;
+  margin-bottom: 0.5rem;
+}
+
+.contact-info strong {
+  font-weight: 500;
+  color: var(--navy);
+}
