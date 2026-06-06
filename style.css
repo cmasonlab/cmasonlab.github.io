@@ -5,7 +5,7 @@
    TO CHANGE FONTS: Edit the @import line and font-family values.
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Source+Serif+4:ital,wght@0,300;0,400;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Open+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap');
 
 * {
   box-sizing: border-box;
@@ -33,7 +33,7 @@
    BASE STYLES
    ============================================================ */
 body {
-  font-family: 'Source Serif 4', Georgia, serif;
+  font-family: 'Open Sans', sans-serif;
   background: var(--cream);
   color: var(--text-dark);
   line-height: 1.7;
@@ -66,7 +66,7 @@ nav {
 .nav-brand {
   font-family: 'Playfair Display', serif;
   color: #fff;
-  font-size: 18px;
+  font-size: 24px;
   font-weight: 500;
   letter-spacing: 0.02em;
   text-decoration: none;
