@@ -226,6 +226,8 @@ nav {
 
 .page-header-content {
   position: relative;
+  width: 100%;
+  text-align: center;
 }
 
 .page-header h1 {
