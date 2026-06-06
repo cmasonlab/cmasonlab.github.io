@@ -695,6 +695,48 @@ footer {
   font-weight: 500;
   color: var(--navy);
 }
+
+/* ============================================================
+   EXPLORE STRIP — homepage navigation cards
+   ============================================================ */
+.explore-strip {
+  background: var(--gray-bg);
+  padding: 3rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  border-top: 1px solid var(--gray-mid);
+}
+
+.explore-card {
+  background: var(--cream);
+  border: 0.5px solid var(--gray-mid);
+  border-radius: 4px;
+  padding: 1.25rem 1.75rem;
+  text-decoration: none;
+  color: var(--navy);
+  font-family: 'Playfair Display', serif;
+  font-size: 15px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  min-width: 160px;
+}
+
+.explore-card:hover {
+  border-color: var(--brown);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  text-decoration: none;
+}
+
+.explore-card-arrow {
+  color: var(--brown);
+  font-size: 18px;
+}
+
 /* ============================================================
    MOBILE RESPONSIVE — applies to screens under 768px wide
    ============================================================ */
@@ -735,6 +777,14 @@ footer {
 
   .alumni-grid {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .explore-strip {
+    padding: 2rem 1.25rem;
+  }
+
+  .explore-card {
+    min-width: calc(50% - 0.5rem);
   }
 
   .page-header {
