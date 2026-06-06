@@ -105,7 +105,7 @@ nav {
 
 .hero-content {
   position: relative;
-  max-width: 680px;
+  max-width: 100%;
 }
 
 .hero-eyebrow {
