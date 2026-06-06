@@ -136,7 +136,7 @@ nav {
   font-weight: 300;
   color: rgba(255, 255, 255, 0.75);
   line-height: 1.8;
-  max-width: 520px;
+  max-width: 100%;
   margin-bottom: 2rem;
 }
 
