@@ -188,11 +188,11 @@ nav {
 }
 
 .section-label {
-  font-size: 13px;
+  font-size: 16px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--brown);
-  font-weight: 400;
+  font-weight: 500;
   margin-bottom: 0.75rem;
 }
 
