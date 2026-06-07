@@ -1,11 +1,11 @@
 /* ============================================================
    MASON RESEARCH LAB — Main Stylesheet
-   
+
    TO CHANGE COLORS: Edit the values in the :root section below.
    TO CHANGE FONTS: Edit the @import line and font-family values.
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Open+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Open+Sans:ital,wght@0,300;0,400;0,500;1,300&family=Cormorant+Garamond:wght@400;500;600&display=swap');
 
 * {
   box-sizing: border-box;
@@ -17,16 +17,16 @@
    COLOR VARIABLES — Edit these to change the site's colors
    ============================================================ */
 :root {
-  --navy: #1a2e4a;           /* Primary dark color — nav, hero, headings */
-  --navy-light: #243d5f;     /* Slightly lighter navy — card backgrounds */
-  --navy-dark: #111e30;      /* Darkest navy — team section, footer */
-  --brown: #7c5c3e;          /* Accent color — buttons, borders, labels */
-  --brown-light: #9e7a57;    /* Light accent — hover states, eyebrow text */
-  --gray-bg: #f4f2ef;        /* Light gray — section backgrounds */
-  --cream: #faf8f4;          /* Off-white — page background, cards */
-  --gray-mid: #e8e4de;       /* Mid gray — borders, dividers */
-  --gray-text: #6b6560;      /* Muted text color */
-  --text-dark: #2a2420;      /* Main body text color */
+  --navy:        #1a2e4a;   /* Primary — nav, hero, headings */
+  --navy-light:  #243d5f;   /* Card backgrounds */
+  --navy-dark:   #111e30;   /* Team section, footer */
+  --brown:       #7c5c3e;   /* Accent — buttons, borders, labels */
+  --brown-light: #9e7a57;   /* Hover states, eyebrow text */
+  --gray-bg:     #f4f2ef;   /* Section backgrounds */
+  --cream:       #faf8f4;   /* Page background, cards */
+  --gray-mid:    #e8e4de;   /* Borders, dividers */
+  --gray-text:   #6b6560;   /* Muted text */
+  --text-dark:   #2a2420;   /* Main body text */
 }
 
 /* ============================================================
@@ -57,19 +57,26 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 64px;
+  height: 90px;
   position: sticky;
   top: 0;
   z-index: 100;
 }
 
 .nav-brand {
-  font-family: 'Playfair Display', serif;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: 'Cormorant Garamond', serif;
   color: #fff;
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 500;
   letter-spacing: 0.02em;
   text-decoration: none;
+}
+
+.nav-brand img {
+  height: 70px;
 }
 
 .nav-links {
@@ -93,28 +100,19 @@ nav {
 }
 
 /* ============================================================
-   HERO SECTION
+   HERO SECTION (homepage only)
    ============================================================ */
 .hero {
   background: var(--navy);
   padding: 5rem 3rem 4rem;
   position: relative;
   overflow: hidden;
+  text-align: center;
 }
-
 
 .hero-content {
   position: relative;
   max-width: 100%;
-}
-
-.hero-eyebrow {
-  font-size: 12px;
-  letter-spacing: 0.12em;
-  color: var(--brown-light);
-  text-transform: uppercase;
-  font-weight: 300;
-  margin-bottom: 1rem;
 }
 
 .hero h1 {
@@ -138,6 +136,41 @@ nav {
   line-height: 1.8;
   max-width: 100%;
   margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* ============================================================
+   PAGE HEADER (interior pages)
+   ============================================================ */
+.page-header {
+  background: var(--navy);
+  padding: 3rem;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.page-header-content {
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+
+.page-header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 0.75rem;
+}
+
+.page-header p {
+  font-size: 16px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 100%;
+  line-height: 1.8;
+  text-align: center;
 }
 
 /* ============================================================
@@ -161,15 +194,9 @@ nav {
   text-decoration: none;
 }
 
-.btn-outline {
-  background: transparent;
-  border: 1px solid var(--brown);
-  color: var(--brown);
-}
-
-.btn-outline:hover {
-  background: var(--brown);
-  color: #fff;
+.btn-sm {
+  padding: 0.5rem 1.25rem;
+  font-size: 13px;
 }
 
 /* ============================================================
@@ -188,11 +215,11 @@ nav {
 }
 
 .section-label {
-  font-size: 16px;
+  font-size: 13px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--brown);
-  font-weight: 500;
+  font-weight: 400;
   margin-bottom: 0.75rem;
 }
 
@@ -214,40 +241,7 @@ nav {
 }
 
 /* ============================================================
-   PAGE HEADER (interior pages)
-   ============================================================ */
-.page-header {
-  background: var(--navy);
-  padding: 3rem;
-  position: relative;
-  overflow: hidden;
-}
-
-
-.page-header-content {
-  position: relative;
-  width: 100%;
-  text-align: center;
-}
-
-.page-header h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 36px;
-  font-weight: 500;
-  color: #fff;
-  margin-bottom: 0.75rem;
-}
-
-.page-header p {
-  font-size: 16px;
-  font-weight: 300;
-  color: rgba(255, 255, 255, 0.7);
-  max-width: 560px;
-  line-height: 1.8;
-}
-
-/* ============================================================
-   ABOUT SECTION (homepage)
+   TWO-COLUMN GRID
    ============================================================ */
 .about-grid {
   display: grid;
@@ -267,6 +261,9 @@ nav {
   margin-bottom: 1rem;
 }
 
+/* ============================================================
+   PILLARS
+   ============================================================ */
 .pillars {
   display: flex;
   flex-direction: column;
@@ -295,266 +292,52 @@ nav {
   line-height: 1.6;
 }
 
-/* ============================================================
-   RESEARCH SECTION
-   ============================================================ */
-.research-theme {
-  background: var(--navy);
-  border-radius: 4px;
-  padding: 1.5rem 2rem;
-  margin-bottom: 2rem;
-  display: flex;
-  align-items: flex-start;
-  gap: 1.5rem;
-}
-
-.research-theme-label {
-  font-size: 10px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--brown-light);
-  font-weight: 300;
-  white-space: nowrap;
-  padding-top: 3px;
-}
-
-.research-theme-text {
-  font-family: 'Playfair Display', serif;
-  font-size: 17px;
-  font-weight: 400;
-  color: #fff;
-  line-height: 1.5;
-  font-style: italic;
-}
-
-.research-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-}
-
-.research-card {
-  background: var(--cream);
-  border: 0.5px solid var(--gray-mid);
+/* Dark pillar card — used on people page */
+.pillar-card {
+  background: var(--navy-light);
+  border-left: 3px solid var(--brown);
   border-radius: 4px;
   padding: 1.5rem;
-  position: relative;
 }
 
-.research-card.emerging::after {
-  content: 'Emerging';
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  font-size: 10px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  background: var(--gray-bg);
-  color: var(--brown);
-  padding: 3px 8px;
-  border-radius: 2px;
-  font-weight: 300;
+/* ============================================================
+   TEAM / PEOPLE
+   ============================================================ */
+.member-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-top: 1rem;
 }
 
-.research-card-num {
-  font-family: 'Playfair Display', serif;
-  font-size: 36px;
-  font-weight: 400;
-  color: var(--gray-mid);
-  line-height: 1;
-  margin-bottom: 0.75rem;
-}
-
-.research-card h3 {
+.member-name {
   font-family: 'Playfair Display', serif;
   font-size: 16px;
   font-weight: 500;
-  color: var(--navy);
-  margin-bottom: 0.5rem;
-  line-height: 1.3;
-}
-
-.research-card p {
-  font-size: 13px;
-  font-weight: 300;
-  color: var(--gray-text);
-  line-height: 1.7;
-}
-
-/* ============================================================
-   TEAM SECTION
-   ============================================================ */
-.team-top {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
-.pi-block {
-  background: var(--navy-light);
-  border-radius: 4px;
-  padding: 1.5rem;
-  border: 0.5px solid rgba(255, 255, 255, 0.08);
-  display: flex;
-  gap: 1.25rem;
-  align-items: flex-start;
-}
-
-.team-avatar {
-  border-radius: 50%;
-  background: var(--brown);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Playfair Display', serif;
-  font-weight: 500;
   color: #fff;
-  flex-shrink: 0;
+  margin-bottom: 0.15rem;
 }
 
-.pi-block .team-avatar {
-  width: 64px;
-  height: 64px;
-  font-size: 20px;
-}
-
-.team-name {
-  font-family: 'Playfair Display', serif;
-  font-weight: 500;
-  color: #fff;
-}
-
-.pi-block .team-name {
-  font-size: 17px;
-  margin-bottom: 0.25rem;
-}
-
-.team-role {
-  font-weight: 300;
-  color: rgba(255, 255, 255, 0.5);
-  line-height: 1.4;
-}
-
-.pi-block .team-role {
-  font-size: 13px;
-}
-
-.pi-bio {
+.member-years {
   font-size: 12px;
-  font-weight: 300;
-  color: rgba(255, 255, 255, 0.45);
-  line-height: 1.6;
-  margin-top: 0.5rem;
-}
-
-.current-block {
-  background: var(--navy-light);
-  border-radius: 4px;
-  padding: 1.5rem;
-  border: 0.5px solid rgba(255, 255, 255, 0.08);
-}
-
-.current-block-label,
-.alumni-block-label {
-  font-size: 10px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--brown-light);
-  font-weight: 300;
-  margin-bottom: 1rem;
-}
-
-.current-members {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
-
-.current-member {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-}
-
-.current-member .team-avatar {
-  width: 40px;
-  height: 40px;
-  font-size: 13px;
-}
-
-.current-member .team-name {
-  font-size: 14px;
-  margin-bottom: 0.1rem;
-}
-
-.current-member .team-role {
-  font-size: 12px;
-}
-
-.alumni-block {
-  margin-top: 2rem;
-  background: var(--navy-light);
-  border-radius: 4px;
-  padding: 1.5rem;
-  border: 0.5px solid rgba(255, 255, 255, 0.08);
-}
-
-.alumni-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 0.5rem 1.5rem;
-}
-
-.alumni-item {
-  font-size: 13px;
-  font-weight: 300;
-  color: rgba(255, 255, 255, 0.7);
-  padding: 0.4rem 0;
-  border-bottom: 0.5px solid rgba(255, 255, 255, 0.06);
-}
-
-.alumni-years {
-  font-size: 11px;
   color: rgba(255, 255, 255, 0.35);
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
   margin-left: 0.4rem;
 }
 
-/* ============================================================
-   FOOTER
-   ============================================================ */
-footer {
-  background: var(--navy-dark);
-  border-top: 1px solid rgba(255,255,255,0.06);
-  padding: 2rem 3rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
-  text-align: center;
-}
-
-.footer-brand {
-  font-family: 'Playfair Display', serif;
-  color: rgba(255, 255, 255, 0.6);
-  font-size: 14px;
-}
-
-.footer-links {
-  display: flex;
-  gap: 1.5rem;
-}
-
-.footer-links a {
-  color: rgba(255, 255, 255, 0.4);
-  text-decoration: none;
-  font-size: 12px;
+.member-role {
+  font-size: 13px;
   font-weight: 300;
-  transition: color 0.2s;
+  color: rgba(255, 255, 255, 0.5);
 }
 
-.footer-links a:hover {
-  color: rgba(255, 255, 255, 0.7);
+.member-bio {
+  font-size: 14px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.7;
+  margin-top: 0.4rem;
 }
 
 /* ============================================================
@@ -581,7 +364,7 @@ footer {
 }
 
 /* ============================================================
-   PUBLICATION LIST (research page)
+   PUBLICATION LIST
    ============================================================ */
 .pub-list {
   list-style: none;
@@ -656,80 +439,50 @@ footer {
 }
 
 /* ============================================================
-   CONTACT PAGE
+   FOOTER
    ============================================================ */
-.contact-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-  align-items: start;
-}
-
-.contact-info p {
-  font-size: 15px;
-  font-weight: 300;
-  color: var(--text-dark);
-  line-height: 1.9;
-  margin-bottom: 0.5rem;
-}
-
-.contact-info strong {
-  font-weight: 500;
-  color: var(--navy);
-}
-
-/* ============================================================
-   EXPLORE STRIP — homepage navigation cards
-   ============================================================ */
-.explore-strip {
-  background: var(--gray-bg);
-  padding: 3rem;
+footer {
+  background: var(--navy-dark);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 2rem 3rem;
   display: flex;
-  gap: 1rem;
-  justify-content: center;
-  flex-wrap: wrap;
-  border-top: 1px solid var(--gray-mid);
-}
-
-.explore-card {
-  background: var(--cream);
-  border: 0.5px solid var(--gray-mid);
-  border-radius: 4px;
-  padding: 1.25rem 1.75rem;
-  text-decoration: none;
-  color: var(--navy);
-  font-family: 'Playfair Display', serif;
-  font-size: 15px;
-  font-weight: 500;
-  display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 0.75rem;
-  transition: border-color 0.2s, box-shadow 0.2s;
-  min-width: 160px;
+  gap: 0.5rem;
+  text-align: center;
 }
 
-.explore-card:hover {
-  border-color: var(--brown);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-  text-decoration: none;
+.footer-brand {
+  font-family: 'Playfair Display', serif;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 14px;
 }
 
-.explore-card-arrow {
-  color: var(--brown);
-  font-size: 18px;
+.footer-copy {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.3);
 }
 
 /* ============================================================
-   MOBILE RESPONSIVE — applies to screens under 768px wide
+   MOBILE RESPONSIVE — screens under 768px
    ============================================================ */
 @media (max-width: 768px) {
 
   nav {
     padding: 0 1.25rem;
+    height: auto;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 0.75rem 1.25rem;
+  }
+
+  .nav-brand img {
+    height: 50px;
   }
 
   .nav-links {
-    gap: 1rem;
+    gap: 0.75rem;
+    flex-wrap: wrap;
   }
 
   .nav-links a {
@@ -748,25 +501,9 @@ footer {
     padding: 2.5rem 1.25rem;
   }
 
-  /* All two-column grids become single column */
   .about-grid,
-  .research-grid,
-  .team-top,
-  .join-grid,
-  .contact-grid {
+  .join-grid {
     grid-template-columns: 1fr;
-  }
-
-  .alumni-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .explore-strip {
-    padding: 2rem 1.25rem;
-  }
-
-  .explore-card {
-    min-width: calc(50% - 0.5rem);
   }
 
   .page-header {
@@ -774,14 +511,6 @@ footer {
   }
 
   footer {
-    flex-direction: column;
-    gap: 1rem;
     padding: 1.5rem 1.25rem;
-    text-align: center;
-  }
-
-  .footer-links {
-    flex-wrap: wrap;
-    justify-content: center;
   }
 }

@@ -5,14 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>People | Mason Research Lab</title>
   <meta name="description" content="Meet the members and alumni of the Mason Research Lab.">
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <nav>
-    <a href="index.html" class="nav-brand" style="display:flex;align-items:center;gap:0.75rem;font-family:'Cormorant Garamond',serif;">
-      <img src="logo.png" alt="Mason Research Lab" style="height:80px;">
+    <a href="index.html" class="nav-brand">
+      <img src="logo.png" alt="Mason Research Lab logo">
       Mason Research Lab
     </a>
     <ul class="nav-links">
@@ -25,71 +24,69 @@
   </nav>
 
   <div class="page-header">
-    <div class="page-header-content" style="text-align:center;width:100%;">
+    <div class="page-header-content">
       <h1>People</h1>
-      <p style="max-width:100%;text-align:center;">Meet the researchers behind the Mason Research Lab, past and present.</p>
+      <p>Meet the researchers behind the Mason Research Lab, past and present.</p>
     </div>
   </div>
 
-  <!-- ============================================================
-       THREE PILLARS: PI, Current Members, Alumni
-       ============================================================ -->
+  <!-- THREE COLUMNS: PI, Current Members, Alumni -->
   <div class="section section-dark">
-  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2rem;">
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2rem;">
 
-      <!-- PILLAR 1: Principal Investigator -->
-      <div class="pillar" style="background:var(--navy-light);border-radius:4px;padding:1.5rem;border-left:3px solid var(--brown);">
-        <div class="section-label" style="color:var(--brown-light);">Principal Investigator</div>
-        <div style="font-family:'Playfair Display',serif;font-size:17px;font-weight:500;color:#fff;margin-bottom:0.25rem;">Chandra D. Mason, Ph.D.</div>
-        <div style="font-size:14px;font-weight:300;color:rgba(255,255,255,0.65);line-height:1.7;margin-bottom:1.25rem;">Dr. Mason is a critical social-personality-organizational psychologist with more than 25 years of experience conducting research that examines the harms of bias and discrimination on marginalized groups and public attitudes toward justice for disempowered populations.
-
-She is Professor of Psychology and Department Chair of Psychological Sciences at Mary Baldwin University, where she directs the Mason Research Lab. Her methodological expertise includes psychometrics, structural equation modeling, path analysis, quasi-experimental methods, and longitudinal designs.
-
-Dr. Mason holds a doctorate in Critical Social-Personality Psychology from the CUNY Graduate School and University Center. She has served as an affiliated professor at the University of Virginia and as a consultant to organizations including the Walter Reed Army Institute of Research, Families and Work Institute, Catalyst, The Murphy Deming College of Healh Sciences at MBU, and a Big Four professional services firm.</div>
-        <a href="CV_Mason-June 2026.pdf" class="btn" style="font-size:13px;padding:0.5rem 1.25rem;">Download CV</a>
+      <!-- COLUMN 1: Principal Investigator -->
+      <div class="pillar-card">
+        <div class="section-label">Principal Investigator</div>
+        <div class="member-name" style="font-size:17px;margin-bottom:0.25rem;">Chandra D. Mason, Ph.D.</div>
+        <div class="member-bio">Dr. Mason is a critical social-personality-organizational psychologist with more than 25 years of experience conducting research that examines the harms of bias and discrimination on marginalized groups and public attitudes toward justice for disempowered populations.</div>
+        <div class="member-bio" style="margin-top:0.75rem;">She is Professor of Psychology and Department Chair of Psychological Sciences at Mary Baldwin University, where she directs the Mason Research Lab. Her methodological expertise includes psychometrics, structural equation modeling, path analysis, quasi-experimental methods, and longitudinal designs.</div>
+        <div class="member-bio" style="margin-top:0.75rem;">Dr. Mason holds a doctorate in Critical Social-Personality Psychology from the CUNY Graduate School and University Center. She has served as an affiliated professor at the University of Virginia and as a consultant to organizations including the Walter Reed Army Institute of Research, Families and Work Institute, Catalyst, the Murphy Deming College of Health Sciences at MBU, and a Big Four professional services firm.</div>
+        <p style="margin-top:1.25rem;">
+          <a href="CV_Mason_June_2026.pdf" class="btn btn-sm">Download CV</a>
+        </p>
       </div>
 
-      <!-- PILLAR 2: Current Members -->
-      <div class="pillar" style="background:var(--navy-light);border-radius:4px;padding:1.5rem;border-left:3px solid var(--brown);">
-        <div class="section-label" style="color:var(--brown-light);">Current Members
-        </div>
-        <div style="display:flex;flex-direction:column;gap:1.25rem;">
+      <!-- COLUMN 2: Current Members -->
+      <div class="pillar-card">
+        <div class="section-label">Current Members <span style="font-weight:300;text-transform:none;letter-spacing:0;font-size:12px;color:rgba(255,255,255,0.4);">2026-2027</span></div>
+        <div class="member-list">
           <div>
-            <div style="font-family:'Playfair Display',serif;font-size:16px;font-weight:500;color:#fff;margin-bottom:0.15rem;">Elizabeth Jackson <span style="font-size:12px;color:rgba(255,255,255,0.35);font-family:'Open Sans',sans-serif;font-weight:300;">(2024-Present)</span></div>
-            <div style="font-size:13px;font-weight:300;color:rgba(255,255,255,0.5);">Research Associate</div>
+            <div class="member-name">Elizabeth Jackson <span class="member-years">(2024-Present)</span></div>
+            <div class="member-role">Research Associate</div>
           </div>
           <div>
-            <div style="font-family:'Playfair Display',serif;font-size:16px;font-weight:500;color:#fff;margin-bottom:0.15rem;">Connor Minnigh <span style="font-size:12px;color:rgba(255,255,255,0.35);font-family:'Open Sans',sans-serif;font-weight:300;">(2024-Present)</span></div>
-            <div style="font-size:13px;font-weight:300;color:rgba(255,255,255,0.5);">Research Assistant</div>
+            <div class="member-name">Connor Minnigh <span class="member-years">(2024-Present)</span></div>
+            <div class="member-role">Research Assistant</div>
           </div>
         </div>
+        <p style="margin-top:1.5rem;">
+          <a href="join.html" class="btn btn-sm">Join the lab</a>
+        </p>
       </div>
 
-      <!-- PILLAR 3: Lab Alumni -->
-      <div class="pillar" style="background:var(--navy-light);border-radius:4px;padding:1.5rem;border-left:3px solid var(--brown);">
-        <div class="section-label" style="color:var(--brown-light);">Lab Alumni</div>
-        <div style="display:flex;flex-direction:column;gap:1.25rem;">
+      <!-- COLUMN 3: Lab Alumni -->
+      <div class="pillar-card">
+        <div class="section-label">Lab Alumni</div>
+        <div class="member-list">
           <div>
-            <div style="font-family:'Playfair Display',serif;font-size:16px;font-weight:500;color:#fff;margin-bottom:0.15rem;">Zoe Kaufman <span style="font-size:12px;color:rgba(255,255,255,0.35);font-family:'Open Sans',sans-serif;font-weight:300;">(2025-2026)</span></div>
-            <div style="font-size:13px;font-weight:300;color:rgba(255,255,255,0.5);">Research Assistant</div>
+            <div class="member-name">Zoe Kaufman <span class="member-years">(2025-2026)</span></div>
+            <div class="member-role">Research Assistant</div>
           </div>
           <div>
-            <div style="font-family:'Playfair Display',serif;font-size:16px;font-weight:500;color:#fff;margin-bottom:0.15rem;">Mackenzie Lee <span style="font-size:12px;color:rgba(255,255,255,0.35);font-family:'Open Sans',sans-serif;font-weight:300;">(2025-2026)</span></div>
-            <div style="font-size:13px;font-weight:300;color:rgba(255,255,255,0.5);">Research Assistant</div>
+            <div class="member-name">Mackenzie Lee <span class="member-years">(2025-2026)</span></div>
+            <div class="member-role">Research Assistant</div>
           </div>
           <div>
-            <div style="font-family:'Playfair Display',serif;font-size:16px;font-weight:500;color:#fff;margin-bottom:0.15rem;">Amaya Warner <span style="font-size:12px;color:rgba(255,255,255,0.35);font-family:'Open Sans',sans-serif;font-weight:300;">(2024-2026)</span></div>
-            <div style="font-size:13px;font-weight:300;color:rgba(255,255,255,0.5);">Research Assistant</div>
+            <div class="member-name">Amaya Warner <span class="member-years">(2024-2026)</span></div>
+            <div class="member-role">Research Assistant</div>
           </div>
           <div>
-            <div style="font-family:'Playfair Display',serif;font-size:16px;font-weight:500;color:#fff;margin-bottom:0.15rem;">Daniel Minnigh <span style="font-size:12px;color:rgba(255,255,255,0.35);font-family:'Open Sans',sans-serif;font-weight:300;">(2023-2026)</span></div>
-            <div style="font-size:13px;font-weight:300;color:rgba(255,255,255,0.5);">Research Assistant</div>
+            <div class="member-name">Daniel Minnigh <span class="member-years">(2023-2026)</span></div>
+            <div class="member-role">Research Assistant</div>
           </div>
           <div>
-            <div style="font-family:'Playfair Display',serif;font-size:16px;font-weight:500;color:#fff;margin-bottom:0.15rem;">Casey Nguyen <span style="font-size:12px;color:rgba(255,255,255,0.35);font-family:'Open Sans',sans-serif;font-weight:300;">(2023-2024)</span></div>
-            <div style="font-size:13px;font-weight:300;color:rgba(255,255,255,0.5);">Research Assistant</div>
-          </div>
-          <div>
+            <div class="member-name">Casey Nguyen <span class="member-years">(2023-2024)</span></div>
+            <div class="member-role">Research Assistant</div>
           </div>
         </div>
       </div>
@@ -99,7 +96,7 @@ Dr. Mason holds a doctorate in Critical Social-Personality Psychology from the C
 
   <footer>
     <div class="footer-brand">Mason Research Lab · cmasonlab.github.io</div>
-    <div style="font-size:11px;color:rgba(255,255,255,0.3);">© 2026 Chandra D. Mason. All rights reserved.</div>
+    <div class="footer-copy">© 2026 Chandra D. Mason. All rights reserved.</div>
   </footer>
 
 </body>
