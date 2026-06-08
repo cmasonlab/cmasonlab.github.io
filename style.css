@@ -144,7 +144,7 @@ nav {
    ============================================================ */
 .page-header {
   background: var(--navy);
-  padding: 1.5rem 3rem;
+  padding: .75rem 3rem;
   position: relative;
   overflow: hidden;
   text-align: center;
