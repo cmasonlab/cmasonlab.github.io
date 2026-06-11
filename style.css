@@ -380,6 +380,8 @@ nav {
   border-radius: 4px;
   padding: 1.25rem 1.5rem;
   border-left: 3px solid var(--brown);
+  text-indent: -2rem;
+  padding-left: 3.5rem;
 }
 
 .pub-title {
